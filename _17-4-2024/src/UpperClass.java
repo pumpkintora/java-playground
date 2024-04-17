@@ -1,12 +1,16 @@
+import java.util.ArrayList;
+
 class UpperClass extends Person {
 
     private char fullName;
 
     private char occupation;
 
-    private long netWorth;
+    private Integer netWorth;
 
-    public UpperClass(char fullName, char occupation, long netWorth, ArrayList<char> ownedCompany) {
+    private ArrayList<Character> ownedCompany;
+
+    public UpperClass(char fullName, char occupation, Integer netWorth, ArrayList<Character> ownedCompany) {
         this.fullName = fullName;
         this.occupation = occupation;
         this.netWorth = netWorth;
@@ -17,11 +21,13 @@ class UpperClass extends Person {
         return true;
     }
 
-    public <void, K> void getInformation(K entity) {
+    @Override
+    public char getInformation() {
         return this.fullName;
     }
 
-    public char getNetWorth() {
-        return 'confidential';
+    @Override
+    public <T> T getNetWorth() {
+        return (T) "confidential";
     }
 }

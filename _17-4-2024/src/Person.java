@@ -1,10 +1,12 @@
+import java.util.ArrayList;
+
 abstract class Person {
 
     private char fullName;
 
     private long netWorth;
 
-    private ArrayList<char> ownedCompany;
+    private ArrayList<Character> ownedCompany;
 
     private char employedBy;
 
