@@ -2,18 +2,12 @@ import java.util.ArrayList;
 
 class UpperClass extends Person {
 
-    private char fullName;
-
-    private char occupation;
-
+    private String fullName;
     private Integer netWorth;
-
-    private ArrayList<Character> ownedCompany;
-
-    public UpperClass(char fullName, char occupation, Integer netWorth, ArrayList<Character> ownedCompany) {
+    private ArrayList<String> ownedCompany;
+    public UpperClass(String fullName, long netWorth, ArrayList<String> ownedCompany) {
         this.fullName = fullName;
-        this.occupation = occupation;
-        this.netWorth = netWorth;
+        this.netWorth = Math.toIntExact(netWorth);
         this.ownedCompany = ownedCompany;
     }
 
@@ -22,7 +16,7 @@ class UpperClass extends Person {
     }
 
     @Override
-    public char getInformation() {
+    public String getInformation() {
         return this.fullName;
     }
 

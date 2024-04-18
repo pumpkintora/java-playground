@@ -1,11 +1,23 @@
+import java.util.ArrayList;
+
+//interface inputClass {
+//    char fullName = 0;
+//
+//    char occupation = 0;
+//
+//    long netWorth = 0;
+//
+//    ArrayList<Character> ownedCompany = new ArrayList<>();
+//}
+
 class PersonFactory {
-    public static <T, Object> T create(Object entity) {
-        if (entity.netWorth > 1000000) {
-            return new UpperClass(entity.fullName,
-                    entity.occupation,
-                    entity.netWorth,
-                    entity.ownedCompany);
+    public static <T> T create(String fullName, String occupation, long netWorth, ArrayList<String> ownedCompany, String employedBy) {
+        if (netWorth > 1000000) {
+            return (T) new UpperClass(fullName, netWorth, ownedCompany);
         }
-        if (entity)
+        if (netWorth > 100000) {
+            return (T) new MiddleClass(fullName, occupation, netWorth, employedBy);
+        }
+        return (T) new LowClass(fullName);
     }
 }

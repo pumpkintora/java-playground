@@ -1,19 +1,13 @@
 import java.util.ArrayList;
 
 abstract class Person {
-
-    private char fullName;
-
+    private String fullName;
+    private String occupation;
     private long netWorth;
-
     private ArrayList<Character> ownedCompany;
-
-    private char employedBy;
-
+    private String employedBy;
     abstract public boolean isImportant();
-
-    abstract public char getInformation();
-
+    abstract public String getInformation();
 //    if net-worth < 100000, return actual net worth, else return "confidential"
     abstract public <T> T getNetWorth();
 }
