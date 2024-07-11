@@ -1,8 +1,8 @@
 public class LowClass extends Person{
 
-    private char fullName;
+    private String fullName;
 
-    public LowClass(char fullName) {
+    public LowClass(String fullName) {
         this.fullName = fullName;
     }
 
@@ -12,7 +12,7 @@ public class LowClass extends Person{
     }
 
     @Override
-    public char getInformation() {
+    public String getInformation() {
         return this.fullName;
     }
 

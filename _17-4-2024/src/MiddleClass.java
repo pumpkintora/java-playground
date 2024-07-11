@@ -2,18 +2,18 @@ import java.util.ArrayList;
 
 class MiddleClass extends Person {
 
-    private char fullName;
+    private String fullName;
 
-    private char occupation;
+    private String occupation;
 
     private Integer netWorth;
 
-    private char employedBy;
+    private String employedBy;
 
-    public MiddleClass(char fullName, char occupation, Integer netWorth, char employedBy) {
+    public MiddleClass(String fullName, String occupation, long netWorth, String employedBy) {
         this.fullName = fullName;
         this.occupation = occupation;
-        this.netWorth = netWorth;
+        this.netWorth = Math.toIntExact(netWorth);
         this.employedBy = employedBy;
     }
 
@@ -22,7 +22,7 @@ class MiddleClass extends Person {
     }
 
     @Override
-    public char getInformation() {
+    public String getInformation() {
         return this.fullName;
     }
 
